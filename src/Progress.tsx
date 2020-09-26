@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import { LinearProgress } from "@material-ui/core";
+import { LinearProgress, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,10 +8,22 @@ const useStyles = makeStyles((theme) => ({
     padding: "40px 0",
   },
   title: {
-    fontSize: "1.3rem",
+    fontSize: "1.5rem",
     textAlign: "left",
     fontWeight: "bold",
     color: "#233142",
+  },
+  bar: {
+    position: "relative",
+  },
+  value: {
+    position: "absolute",
+    fontSize: "1.3rem",
+    fontWeight: "bold",
+    color: "#ebf7fd",
+    top: "10px",
+    left: "10px",
+    zIndex: 1,
   },
 }));
 
@@ -41,7 +53,15 @@ export const Progress = (props: Props) => {
   return (
     <div className={classes.root}>
       <div className={classes.title}>{props.title}</div>
-      <BorderLinearProgress variant="determinate" value={props.value} />
+      <div className={classes.bar}>
+        <Typography className={classes.value} variant="body1">
+          {props.value}%
+        </Typography>
+        <BorderLinearProgress
+          variant="determinate"
+          value={props.value}
+        ></BorderLinearProgress>
+      </div>
     </div>
   );
 };
