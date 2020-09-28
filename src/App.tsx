@@ -6,18 +6,21 @@ import { calcYearProgress, calcMonthProgress, calcDayProgress } from "./utils";
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
-    maxWidth: "800px",
-    margin: "0 auto",
+    maxWidth: "600px",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "90%",
   },
   header: {
     fontWeight: "bold",
     fontSize: "4rem",
-    padding: "30px",
+    padding: "20px",
     color: "#233142",
   },
   container: {
-    margin: "0 auto",
-    maxWidth: "600px",
+    marginTop: "10px",
   },
 }));
 
