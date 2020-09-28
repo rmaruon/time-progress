@@ -4,8 +4,7 @@ import { LinearProgress, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: "0 40px",
-    padding: "40px 0",
+    padding: "40px",
   },
   title: {
     fontSize: "1.5rem",

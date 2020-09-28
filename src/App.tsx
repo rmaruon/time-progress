@@ -12,11 +12,11 @@ const useStyles = makeStyles((theme) => ({
   header: {
     fontWeight: "bold",
     fontSize: "4rem",
-    margin: "80px 0",
+    padding: "30px",
     color: "#233142",
   },
   container: {
-    margin: "100px auto",
+    margin: "0 auto",
     maxWidth: "600px",
   },
 }));
